@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.instructormaster')
 @section('title','Instructors Index')
 @section('content')
 	<div class="row">
