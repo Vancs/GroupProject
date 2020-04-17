@@ -2,8 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/login', 'Pagecontroller@login');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::group(['middleware' => ['auth']], function () {
+    //Route::get('/','PagesController@home');
+    Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/schedule','courseController@index');
 
+<<<<<<< HEAD
 Route::get('/', function () {
     print("This is a test");
     return view('welcome');
@@ -15,3 +23,9 @@ Route::get('/instructors/{id}/delete','InstructorController@destroy')->name('ins
 Route::get('/create','InstructorController@create')->name('instructors.create');
 Route::post('/create','InstructorController@store')->name('instructors.store');
 Route::post('/instructor/update','InstructorController@update')->name('instructors.update');
+=======
+});
+
+
+Auth::routes();
+>>>>>>> dfc178f9459c1d4d808f01ebb1a7bcbce742b345
