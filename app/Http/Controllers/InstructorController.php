@@ -17,7 +17,7 @@ class InstructorController extends Controller
     {
         //Show all instructors from the database and return to view
         $instructors = Instructor::all();
-        return view('instructor.index',['instructors'=>$instructors]);
+        return view('instructors.index',['instructors'=>$instructors]);
     }
     /**
      * Show the form for creating a new resource.
