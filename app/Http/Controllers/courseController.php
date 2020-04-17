@@ -15,7 +15,7 @@ class courseController extends Controller
     public function index()
     {
         print('Welcome to the Course List');
-        $data = \DB::select("select CRSRID, Code,Title,Location,SETime,Instructor, Comments from schedules");
+        $data = \DB::select("select * from schedules");
         return \View::make('schedules')->with('schedules',$data);
     }
 
@@ -40,20 +40,36 @@ class courseController extends Controller
         print("inside Store");
         $course = new Courses();
         request()->validate([
+            'semester_and_year' => ['required', 'min:3'],
             'CRSRID' => ['required', 'integer'],
             'Code' => ['required', 'integer'],
             'Title' => ['required', 'min:3'],
-            'Location' => ['required', 'min:3'],
-            'SETime' => ['required', 'min:3'],
-            'Instructor' => ['required', 'min:3'],
+            'credit' => ['required', 'integer'],
+            'start_date' => ['required', 'date'],
+            'end_date' => ['required', 'date'],
+            'class_days' => ['required', 'integer'],
+            'class_time' => ['required', 'time'],
+            'final_day' => ['required', 'min:3'],
+            'final_time' => ['required', 'time'],
+            'enrollment' => ['required', 'integer'],
+            'instructor_id' => ['required', 'integer'],
+            'location_id' => ['required', 'integer'],
             'Comments' => ['required', 'min:3'],
         ]);
+        $course->semester_and_year = request('semester_and_year');
         $course->CRSRID = request('CRSRID');
         $course->Code = request('Code');
         $course->Title = request('Title');
-        $course->Location = request('Location');
-        $course->SETime = request('SETime');
-        $course->Instructor = request('Instructor');
+        $course->credit = request('credit');
+        $course->start_date = request('start_date');
+        $course->end_date = request('end_date');
+        $course->class_days = request('class_days');
+        $course->class_time = request('class_time');
+        $course->final_day = request('final_day');
+        $course->final_time = request('final_time');
+        $course->enrollment = request('enrollment');
+        $course->instructor_id = request('instructor_id');
+        $course->location_id = request('location_id');
         $course->Comments = request('Comments');
         $course->save();
         //print (" Saved ... we are done");
@@ -97,22 +113,41 @@ class courseController extends Controller
     public function update(Request $request, $id)
     {
         print ("inside Update");
+        $semester_and_year = request('semester_and_year');
         $CRSRID = request('CRSRID');
         $Code = request('Code');
         $Title = request('Title');
-        $Location = request('Location');
-        $SETime = request('SETime');
-        $Instructor = request('Instructor');
+        $credit = request('credit');
+        $start_date = request('start_date');
+        $end_date = request('end_date');
+        $class_days = request('class_days');
+        $class_time = request('class_time');
+        $final_day = request('final_day');
+        $final_time = request('final_time');
+        $enrollment = request('enrollment');
+        $instructor_id = request('instructor_id');
+        $location_id = request('location_id');
         $Comments = request('Comments');
-        print("CRSRID = $CRSRID , Code = $Code , Title = $Title , Location = $Location , SETime = $SETime , Instructor = $Instructor , Comments = $Comments");
+        print("semester_and_year = $semester_and_year, CRSRID = $CRSRID , Code = $Code , Title = $Title ,
+        credit = $credit, start_date = $start_date, end_date = $end_date, class_days = $class_days,
+        class_time = $class_time, final_day = $final_day, final_time = $final_time, enrollment = $enrollment,
+        instructor_id = $instructor_id , location_id = $location_id , Comments = $Comments");
         exit(1);
         $course = \App\Courses::find($id);
+        $course->semester_and_year = $semester_and_year;
         $course->CRSRID = $CRSRID;
         $course->Code = $Code;
         $course->Title = $Title;
-        $course->Location = $Location;
-        $course->SETime = $SETime;
-        $course->Instructor = $Instructor;
+        $course->credit = $credit;
+        $course->start_date = $start_date;
+        $course->end_date = $end_date;
+        $course->class_days = $class_days;
+        $course->class_time = $class_time;
+        $course->final_day = $final_day;
+        $course->final_time = $final_time;
+        $course->enrollment = $enrollment;
+        $course->instructor_id = $instructor_id;
+        $course->location_id = $location_id;
         $course->Comments = $Comments;
         $course->save();
         return redirect("/schedule");

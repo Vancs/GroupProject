@@ -267,7 +267,7 @@
                     <h2>Course<b>Schedules</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="books/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Book</span></a>
+                    <a href="schedule/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Book</span></a>
                 </div>
             </div>
         </div>
@@ -275,12 +275,20 @@
             <thead>
             <tr>
                 <th>Id</th>
-                <th>CRS RID</th>
+                <th>Semester and Year</th>
+                <th>Course ID</th>
                 <th>Code</th>
                 <th>Title</th>
-                <th>Location</th>
-                <th>START/END Time</th>
-                <th>Instructor</th>
+                <th>Credit</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Class Days</th>
+                <th>Class time</th>
+                <th>Final Day</th>
+                <th>Final Time</th>
+                <th>Enrollment</th>
+                <th>Instructor ID</th>
+                <th>Location ID</th>
                 <th>Comments</th>
             </tr>
             </thead>
