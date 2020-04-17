@@ -14,9 +14,11 @@ class courseController extends Controller
      */
     public function index()
     {
+        $Schedules = Courses::all();
         print('Welcome to the Course List');
-        $data = \DB::select("select * from schedules");
-        return \View::make('schedules')->with('schedules',$data);
+        return view('schedule', ['Schedules' => $Schedules]);
+        //$data = \DB::select("select * from schedules");
+        //return \View::make('schedule')->with('schedules',$Schedule);
     }
 
     /**
@@ -26,7 +28,7 @@ class courseController extends Controller
      */
     public function create()
     {
-        return \View::make('scheduleCreate');
+        return view('scheduleCreate');
     }
 
     /**
