@@ -26,5 +26,13 @@ Route::post('/instructors/create','InstructorController@store')->name('instructo
 Route::post('/instructor/update','InstructorController@update')->name('instructors.update');
 
 
+Route::get('/locations', 'LocationController@index')->name('locations.index');
+//Route::get('/instructors','InstructorController@index');
+Route::get('/locations/{id}/edit','LocationController@edit')->name('locations.edit');
+Route::get('/locations/{id}/delete','LocationController@destroy')->name('locations.destroy');
+Route::get('/locations/create','LocationController@create')->name('locations.create');
+Route::post('/locations/create','LocationController@store')->name('locations.store');
+Route::post('/locations/update','LocationController@update')->name('locations.update');
+
 
 Auth::routes();

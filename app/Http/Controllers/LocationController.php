@@ -13,7 +13,7 @@ class LocationController extends Controller
     {
         //Show all employees from the database and return to view
         $locations = Location::all();
-        return view('location.index',['locations'=>$locations]);
+        return view('locations.index',['locations'=>$locations]);
     }
     /**
      * Show the form for creating a new resource.
@@ -54,7 +54,7 @@ class LocationController extends Controller
     {
         //Find the employee
         $location = Location::find($id);
-        return view('location.edit',['location'=> $location]);
+        return view('locations.edit',['location'=> $location]);
     }
     /**
      * Update the specified resource in storage.
