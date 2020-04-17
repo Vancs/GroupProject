@@ -267,7 +267,7 @@
                     <h2>Course<b>Schedules</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="schedule/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Book</span></a>
+                    <a href="schedule/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A New Course</span></a>
                 </div>
             </div>
         </div>

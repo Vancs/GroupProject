@@ -1,10 +1,10 @@
 @extends('layouts/scheduleMaster')
 <h2> Inside Update Course Schedule</h2>
 @section('content')
-    <form action="/schedule{{$Schedules->id}}" method="post">
+    <form action="/schedule{{$schedules->id}}" method="post">
         @csrf
         {{ method_field('PATCH') }}
-        ID: {{$Schedules->id}}
+        ID: {{$schedules->id}}
 
         Semester and year: <input type="text" name="semester_and_year" value="{{old('semester_and_year')}}">
         Course ID: <input type="number" name="CRSRID" value="{{old('CRSRID')}}">

@@ -1,7 +1,7 @@
 @extends('layouts/scheduleMaster')
 <h2> Inside create a new Course Schedule</h2>
 @section('content')
-    <form action="/schedule" method="post">
+    <form method="post" action="{{ route('schedules.store') }}">
         @csrf
         Semester and year: <input type="text" name="semester_and_year" value="{{old('semester_and_year')}}">
         <p style="color: red">{{$errors->first('semester_and_year')}}</p>

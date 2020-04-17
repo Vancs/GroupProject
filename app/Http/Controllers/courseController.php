@@ -28,7 +28,7 @@ class courseController extends Controller
      */
     public function create()
     {
-        return view('scheduleCreate');
+        return \View::make('scheduleCreate');
     }
 
     /**
@@ -89,8 +89,7 @@ class courseController extends Controller
     {
         print("inside the show method");
         $schedules = Courses::find($id);
-        return \View::make('scheduleShow')->with('schedules',$schedules);
-    }
+        return view('scheduleShow', ['Schedules' => $schedules]);    }
 
     /**
      * Show the form for editing the specified resource.
