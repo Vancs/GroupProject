@@ -24,7 +24,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/instructors', 'InstructorController@index')->name('instructors.index');
-//Route::get('/instructors','InstructorController@index');
 Route::get('/instructors/{id}/edit','InstructorController@edit')->name('instructors.edit');
 Route::get('/instructors/{id}/delete','InstructorController@destroy')->name('instructors.destroy');
 Route::get('/instructors/create','InstructorController@create')->name('instructors.create');

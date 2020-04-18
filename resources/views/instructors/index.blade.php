@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<table class="table">
-				<tr>
+				<tr class = "text-center">
 					<th>ID</th>
 					<th>Name</th>
 				</tr>
