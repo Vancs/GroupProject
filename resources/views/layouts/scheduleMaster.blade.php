@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5b190a499f.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/scrolling-nav.css" rel="stylesheet">
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
+                                                                                                                                                                                                                                           <script src="https://kit.fontawesome.com/5b190a499f.js" crossorigin="anonymous"></script>
+
         body {
             color: #566787;
             background: #f5f5f5;
@@ -258,7 +265,41 @@
         });
     </script>
 </head>
+<br />
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/home">AU Schedule Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/locations">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/instructors">Instructors</a>
+                <li class="nav-item">
+                </li>
+                <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js" rel="stylesheet"></script>
+<!-- Custom JavaScript for this theme -->
+<script src="/js/scrolling-nav.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/js/jquery.easing.min.js"></script>
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
@@ -386,12 +427,6 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
-    <div class="col-sm-6">
-        <a href="instructors/" class="btn btn-success" data-toggle="modal"> <span>Go to the Instructors Screen</span></a>
-        <a href="locations/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Locations Screen</span></a>
-        <a href="home/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Home Screen</span></a>
     </div>
 </body>
 </html>
