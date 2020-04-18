@@ -1,5 +1,5 @@
-@extends('layouts/scheduleMaster')
-<h2> Inside create a new Course Schedule</h2>
+@extends('layouts/scheduleMaster2')
+
 @section('content')
     ID: {{$Schedules->id}}
     <br />  Semester and year: {{$Schedules->semester_and_year}}

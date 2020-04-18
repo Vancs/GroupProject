@@ -13,5 +13,10 @@
 <div class="container">
   @yield('content')
 </div>
+<div class="col-sm-6">
+    <a href="../instructors/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Instructors Screen</span></a>
+    <a href="../locations/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Locations Screen</span></a>
+    <a href="../home/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Home Screen</span></a>
+</div>
 </body>
 </html>

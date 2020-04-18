@@ -1,5 +1,5 @@
-@extends('layouts/scheduleMaster')
-<h2> Inside create a new Course Schedule</h2>
+@extends('layouts/scheduleMaster2')
+<h2> Create A New Course Schedule</h2>
 @section('content')
     <form method="post" action="{{ route('schedules.store') }}">
         @csrf
@@ -34,5 +34,6 @@
         Comments: <input type="text" name="Comments" value="{{old('Comments')}}">
         <p style="color: red">{{$errors->first('Comments')}}</p>
         <input type="submit" value="Create New Course Schedule">
+        <br /> <a href="/schedule" > Go Back to the Main Page </a>
     </form>
 @stop

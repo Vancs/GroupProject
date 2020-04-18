@@ -263,39 +263,17 @@
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
-                <div class="col-lg-6">
-                    <h2>Course<b>Schedules</b></h2>
-                </div>
                 <div class="col-sm-6">
-                    <a href="schedule/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A New Course</span></a>
+                    <h2>Course Schedules</h2>
                 </div>
-           </div>
+            </div>
         </div>
         <table class="table table-striped table-hover">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Semester and Year</th>
-                <th>Course ID</th>
-                <th>Code</th>
-                <th>Title</th>
-                <th>Credit</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Class Days</th>
-                <th>Class time</th>
-                <th>Final Day</th>
-                <th>Final Time</th>
-                <th>Enrollment</th>
-                <th>Instructor ID</th>
-                <th>Location ID</th>
-                <th>Comments</th>
-            </tr>
-            </thead>
             <tbody>
             @yield('content')
             </tbody>
-        </table>
+        </div>
+    </div>
 </div>
 <!-- Edit Modal HTML -->
 <div id="addEmployeeModal" class="modal fade">
@@ -303,7 +281,7 @@
         <div class="modal-content">
             <form>
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Employee</h4>
+                    <h4 class="modal-title">Add Course</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -388,10 +366,5 @@
         </div>
     </div>
 </div>
-    <div class="col-sm-6">
-        <a href="instructors/" class="btn btn-success" data-toggle="modal"> <span>Go to the Instructors Screen</span></a>
-        <a href="locations/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Locations Screen</span></a>
-        <a href="home/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Home Screen</span></a>
-    </div>
 </body>
 </html>

@@ -15,10 +15,7 @@ class courseController extends Controller
     public function index()
     {
         $Schedules = Courses::all();
-        print('Welcome to the Course List');
         return view('schedule', ['Schedules' => $Schedules]);
-        //$data = \DB::select("select * from schedules");
-        //return \View::make('schedule')->with('schedules',$Schedule);
     }
 
     /**
@@ -39,26 +36,7 @@ class courseController extends Controller
      */
     public function store(Request $request)
     {
-        //print("inside Store");
-        //$instructor->name = $request->input('name');
         $course = new Courses();
-        /*request()->validate([
-            'semester_and_year' => ['required', 'min:3'],
-            'CRSRID' => ['required', 'integer'],
-            'Code' => ['required', 'integer'],
-            'Title' => ['required', 'min:3'],
-            'credit' => ['required', 'integer'],
-            'start_date' => ['required', 'date'],
-            'end_date' => ['required', 'date'],
-            'class_days' => ['required', 'integer'],
-            'class_time' => ['required', 'time'],
-            'final_day' => ['required', 'min:3'],
-            'final_time' => ['required', 'time'],
-            'enrollment' => ['required', 'integer'],
-            'instructor_id' => ['required', 'integer'],
-            'location_id' => ['required', 'integer'],
-            'Comments' => ['required', 'min:3'],
-        ]);*/
         $course->semester_and_year = $request->input('semester_and_year');
         $course->CRSRID = $request->input('CRSRID');
         $course->Code = $request->input('Code');
@@ -75,8 +53,6 @@ class courseController extends Controller
         $course->location_id = $request->input('location_id');
         $course->Comments = $request->input('Comments');
         $course->save();
-        //print (" Saved ... we are done");
-        //exit(1);*/
         return redirect("/schedule");
     }
 
@@ -88,7 +64,6 @@ class courseController extends Controller
      */
     public function show($id)
     {
-        print("inside the show method");
         $schedules = Courses::find($id);
         return view('scheduleShow', ['Schedules' => $schedules]);    }
 
@@ -100,7 +75,6 @@ class courseController extends Controller
      */
     public function edit($id)
     {
-        print("inside the show Edit");
         $schedules = Courses::find($id);
         return \View::make('scheduleUpdate')->with('schedules',$schedules);
     }
@@ -114,7 +88,6 @@ class courseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        print ("inside Update");
         $semester_and_year = request('semester_and_year');
         $CRSRID = request('CRSRID');
         $Code = request('Code');
