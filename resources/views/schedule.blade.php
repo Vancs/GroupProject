@@ -1,4 +1,4 @@
-@extends('layouts/scheduleMaster')
+@extends('layouts.scheduleMaster')
 @section('content')
 
     @foreach($Schedules as $b)

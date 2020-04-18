@@ -1,4 +1,4 @@
-@extends('layouts/scheduleMaster')
+@extends('layouts.scheduleMaster')
 <h2> Inside Update Course Schedule</h2>
 @section('content')
     <form action="/schedule{{$schedules->id}}" method="post">
