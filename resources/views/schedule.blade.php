@@ -33,7 +33,7 @@
                 </form>
             </td>
             <td>
-                <form method="get" action="/schedule/{{$b->id}}">
+                <form method="get" action="/schedule/{{$b->id}}/show">
                     @csrf
                     <input type="submit" value="Show:  {{$b->id}}">
                 </form>

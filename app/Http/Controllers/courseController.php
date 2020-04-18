@@ -39,9 +39,10 @@ class courseController extends Controller
      */
     public function store(Request $request)
     {
-        print("inside Store");
+        //print("inside Store");
+        //$instructor->name = $request->input('name');
         $course = new Courses();
-        request()->validate([
+        /*request()->validate([
             'semester_and_year' => ['required', 'min:3'],
             'CRSRID' => ['required', 'integer'],
             'Code' => ['required', 'integer'],
@@ -57,25 +58,25 @@ class courseController extends Controller
             'instructor_id' => ['required', 'integer'],
             'location_id' => ['required', 'integer'],
             'Comments' => ['required', 'min:3'],
-        ]);
-        $course->semester_and_year = request('semester_and_year');
-        $course->CRSRID = request('CRSRID');
-        $course->Code = request('Code');
-        $course->Title = request('Title');
-        $course->credit = request('credit');
-        $course->start_date = request('start_date');
-        $course->end_date = request('end_date');
-        $course->class_days = request('class_days');
-        $course->class_time = request('class_time');
-        $course->final_day = request('final_day');
-        $course->final_time = request('final_time');
-        $course->enrollment = request('enrollment');
-        $course->instructor_id = request('instructor_id');
-        $course->location_id = request('location_id');
-        $course->Comments = request('Comments');
+        ]);*/
+        $course->semester_and_year = $request->input('semester_and_year');
+        $course->CRSRID = $request->input('CRSRID');
+        $course->Code = $request->input('Code');
+        $course->Title = $request->input('Title');
+        $course->credit = $request->input('credit');
+        $course->start_date = $request->input('start_date');
+        $course->end_date = $request->input('end_date');
+        $course->class_days = $request->input('class_days');
+        $course->class_time = $request->input('class_time');
+        $course->final_day = $request->input('final_day');
+        $course->final_time = $request->input('final_time');
+        $course->enrollment = $request->input('enrollment');
+        $course->instructor_id = $request->input('instructor_id');
+        $course->location_id = $request->input('location_id');
+        $course->Comments = $request->input('Comments');
         $course->save();
         //print (" Saved ... we are done");
-        //exit(1);
+        //exit(1);*/
         return redirect("/schedule");
     }
 

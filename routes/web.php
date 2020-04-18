@@ -16,6 +16,7 @@ Route::get('/schedule/{id}/edit','courseController@edit')->name('schedules.edit'
 Route::get('/schedule/{id}/delete','courseController@destroy')->name('schedules.destroy');
 Route::post('/schedule/store','courseController@store')->name('schedules.store');
 Route::post('/schedule/update','courseController@update')->name('schedules.update');
+Route::get('/schedule/{id}/show','courseController@show')->name('schedules.show');
 
 Route::get('/', function () {
     print("This is a test");
