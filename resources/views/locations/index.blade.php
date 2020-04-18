@@ -1,4 +1,4 @@
-@extends('layouts.locationMaster')
+@extends('layouts.MasterLayout.NavLayout')
 @section('title','Locations Index')
 @section('content')
   <div class="row">

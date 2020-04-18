@@ -1,4 +1,4 @@
-@extends('layouts.instructormaster')
+@extends('layouts.MasterLayout.NavLayout')
 @section('title','Create Instructor')
 @section('content')
 	<div class="row mt-5">

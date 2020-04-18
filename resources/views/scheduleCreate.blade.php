@@ -1,4 +1,4 @@
-@extends('layouts/scheduleMaster')
+@extends('layouts.scheduleMaster')
 <h2> Inside create a new Course Schedule</h2>
 @section('content')
     <form method="post" action="{{ route('schedules.store') }}">

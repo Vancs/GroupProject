@@ -1,5 +1,7 @@
-@extends('layouts.locationMaster')
+@extends('layouts.MasterLayout.NavLayout')
 @section('title','Edit Location')
+
+
 @section('content')
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
