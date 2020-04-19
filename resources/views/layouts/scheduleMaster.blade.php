@@ -280,9 +280,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/instructors">Instructors</a>
-                <li class="nav-item">
                 </li>
+                <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#">Reports</a>
                 </li>
             </ul>
         </div>

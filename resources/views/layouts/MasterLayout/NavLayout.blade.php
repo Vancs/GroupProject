@@ -24,14 +24,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="{{ Request::path() === 'locations' ? 'nav-item active' : '' }} ">
             <a class="nav-link js-scroll-trigger" href="/locations">Locations</a>
           </li>
-          <li class="nav-item">
+          <li class="{{ Request::path() === 'instructors' ? 'nav-item active' : '' }} ">
             <a class="nav-link js-scroll-trigger" href="/instructors">Instructors</a>
-          <li class="nav-item">
           </li>
+          <li class="{{ Request::path() === 'schedule' ? 'nav-item active' : '' }} ">
             <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
+          </li>
+          <li class="{{ Request::path() === 'reports' ? 'nav-item active' : '' }} ">
+            <a class="nav-link js-scroll-trigger" href="/reports">Reports</a>
           </li>
         </ul>
       </div>

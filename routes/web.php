@@ -43,4 +43,8 @@ Route::get('/home', function(){
   return view('index');
 });
 
+Route::get('/reports', function(){
+  return view('reports');
+});
+
 Auth::routes();
