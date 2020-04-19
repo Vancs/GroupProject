@@ -17,6 +17,7 @@
 					</tr>
 				@endforeach
 			</table>
+			<a href="{{route('instructors.create',['id'=>$instructor->id])}}" class = "btn btn-success">Add a New Instructor</a>
 		</div>
 	</div>
 @endsection
