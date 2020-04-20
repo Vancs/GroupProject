@@ -56,7 +56,7 @@ class InstructorController extends Controller
     {
         //Find the instructor
         $instructor = Instructor::find($id);
-        return view('instructor.edit',['instructor'=> $instructor]);
+        return view('instructors.edit',['instructor'=> $instructor]);
     }
     /**
      * Update the specified resource in storage.
