@@ -6,8 +6,8 @@
             <td>{{$b->id}}</td>
             <td>{{$b->semester_and_year}}</td>
             <td>{{$b->CRSRID}}</td>
-            <td>{{$b->Code}}</td>
-            <td>{{$b->Title}}</td>
+            <td>{{$b->code}}</td>
+            <td>{{$b->title}}</td>
             <td>{{$b->credit}}</td>
             <td>{{$b->start_date}}</td>
             <td>{{$b->end_date}}</td>
@@ -18,7 +18,7 @@
             <td>{{$b->enrollment}}</td>
             <td>{{$b->instructor_id}}</td>
             <td>{{$b->location_id}}</td>
-            <td>{{$b->Comments}}</td>
+            <td>{{$b->comments}}</td>
             <td>
                 <form method="post" action="/schedule/{{$b->id}}">
                     @csrf

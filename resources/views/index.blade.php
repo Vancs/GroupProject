@@ -17,7 +17,9 @@
           <ul>
             <li>Add to the collection of courses and their respective enrollment numbers.</li>
             <li>Create, Read, Update, and Delete functionality.</li>
-            <li>Track and view enrollment change betweeen semesters for a selected course.</li>
+            <li>Track and view enrollment change between semesters for a selected course.</li>
+            <li>If you would like to visit the AU web site, click <a href="https://www.aurora.edu">Here!</a> </li>
+            <li>If you would like to visit the AU Web Advisor page, click <a href="">Here!</a> </li>
           </ul>
         </div>
       </div>
