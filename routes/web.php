@@ -47,4 +47,8 @@ Route::get('/reports', function(){
   return view('reports');
 });
 
+Route::get('/reports','ReportsController@create');
+Route::post('/reports/store','ReportsController@store');
+Route::get('/reports/index','ReportsController@displayStock');
+
 Auth::routes();
