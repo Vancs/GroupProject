@@ -1,8 +1,7 @@
 @extends('layouts/scheduleMaster2')
 @section('content')
-    <form action="/schedule{{$schedules->id}}" method="post">
+    <form action="{{route('schedules.update')}}" method="post">
         @csrf
-        {{ method_field('PATCH') }}
         ID: {{$schedules->id}}
 
         <br />Semester and year: <input class="form-control" type="text" name="semester_and_year" value="{{$schedules -> semester_and_year}}">
@@ -22,11 +21,14 @@
           <option class="form-control" name="instructor_id" value="{{$instructor['id'] }}"> {{$instructor['name']}}</option>
           @endforeach
           </select>
-
-        <br />  Building: <input class="form-control" type="number" name="location_id" value="{{$schedules -> location_id }}">
-        <br /> Comments: <input class="form-control" type="text" name="Comments" value="{{$schedules -> comments }}">
-        <br /> <button class="btn btn-success" type="submit" value="Update This Course"> Update This Course </button>
+        <br />  Building: <select class="form-control" name="location_id">
+          @foreach ($locations as $location)
+        <option class="form-control" name="location_id" value="{{ $location['id'] }}"> {{$location['building']}}</option>
+          @endforeach
+        </select>
+        <br /> Comments: <textarea class="form-control" type="text" name="Comments" value="{{$schedules -> comments }}">{{$schedules -> comments }}</textarea>
+        <br /> <button class="btn btn-success" type="submit"> Update This Course </button>
+      </form>
         <br />    <a href="/schedule" > Go Back to the Main Page </a>
 
-    </form>
 @stop

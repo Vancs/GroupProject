@@ -30,19 +30,8 @@
             @endif
             @endforeach
             <td>{{$b->comments}}</td>
-            <td>
-                <form method="post" action="/schedule/{{$b->id}}">
-                    @csrf
-                    {{method_field('DELETE')}}
-                    <button class="btn btn-danger" type="submit" value="Delete {{$b->id}}"> Delete </button>
-                </form>
-            </td>
-            <td>
-                <form method="get" action="/schedule/{{$b->id}}/edit">
-                    @csrf
-                    <button class="btn btn-warning" type="submit" value="Update {{$b->id}}"> Update </button>
-                </form>
-            </td>
+            <td><a href="{{route('schedules.destroy',['id'=>$b->id])}}" class = "btn btn-danger">Delete</a></td>
+            <td><a href="{{route('schedules.edit',['id'=>$b->id])}}" class = "btn btn-warning">Edit</a></td>
             <td>
                 <form method="get" action="/schedule/{{$b->id}}/show">
                     @csrf
