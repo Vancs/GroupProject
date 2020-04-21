@@ -11,6 +11,7 @@
    </head>
   <body>
     <div class="container">
+<div class="container">
     <br />
       @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -29,21 +30,20 @@
       </tr>
     </thead>
     <tbody>
-      
-      @foreach($courses as $course)
+
+      @foreach($reports as $report)
       <tr>
-        <td>{{$course->id}}</td>
-        <td>{{$course->CRSRID}}</td>
-        <td>{{$course->semester_and_year}}</td>
-        <td>{{$course->created_at}}</td>
-        <td>{{$course->updated_at}}</td>
+        <td>{{$report->id}}</td>
+        <td>{{$report->CRSRID}}</td>
+        <td>{{$report->semester_and_year}}</td>
+        <td>{{$report->created_at}}</td>
+        <td>{{$report->updated_at}}</td>
           </form>
         </td>
       </tr>
       @endforeach
     </tbody>
   </table>
-  {!! $courses->appends(\Request::except('page'))->render() !!}
+  
   </div>
-  </body>
-</html>
+  @endsection

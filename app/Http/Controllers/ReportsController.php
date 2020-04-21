@@ -25,6 +25,6 @@ class ReportsController extends Controller
     public function displayStock()
     {
         $reports = Courses::sortable()->paginate(5);
-        return view('reports_index',compact('reports'));
+        return view('reports.reports_index',compact('reports'),['reports' => $reports]);
     }
 }
