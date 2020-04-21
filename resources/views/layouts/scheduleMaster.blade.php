@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style type="text/css">
-                                                                                                                                                                                                                                           <script src="https://kit.fontawesome.com/5b190a499f.js" crossorigin="anonymous"></script>
 
         body {
             color: #566787;
@@ -285,7 +285,7 @@
                 <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Reports</a>
+                <a class="nav-link js-scroll-trigger" href="/reports/index">Reports</a>
                 </li>
             </ul>
         </div>
@@ -308,19 +308,12 @@
         <table class="table table-striped table-hover">
             <thead>
             <tr>
-                <th>Id</th>
                 <th>Semester and Year</th>
-                <th>Course ID</th>
                 <th>Code</th>
                 <th>Title</th>
                 <th>Credit</th>
-                <th>Start Date</th>
-                <th>End Date</th>
                 <th>Class Days</th>
                 <th>Class time</th>
-                <th>Final Day</th>
-                <th>Final Time</th>
-                <th>Enrollment</th>
                 <th>Instructor ID</th>
                 <th>Location ID</th>
                 <th>Comments</th>
@@ -421,5 +414,7 @@
             </form>
         </div>
     </div>
+</div>
+</div>
 </body>
 </html>

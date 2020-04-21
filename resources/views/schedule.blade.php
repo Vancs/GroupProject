@@ -13,19 +13,12 @@
 </div>
     @foreach($Schedules as $b)
         <tr>
-            <td>{{$b->id}}</td>
             <td>{{$b->semester_and_year}}</td>
-            <td>{{$b->CRSRID}}</td>
             <td>{{$b->code}}</td>
             <td>{{$b->title}}</td>
             <td>{{$b->credit}}</td>
-            <td>{{$b->start_date}}</td>
-            <td>{{$b->end_date}}</td>
             <td>{{$b->class_days}}</td>
             <td>{{$b->class_time}}</td>
-            <td>{{$b->final_day}}</td>
-            <td>{{$b->final_time}}</td>
-            <td>{{$b->enrollment}}</td>
             <td>{{$b->instructor_id}}</td>
             <td>{{$b->location_id}}</td>
             <td>{{$b->comments}}</td>

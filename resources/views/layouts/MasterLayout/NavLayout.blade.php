@@ -34,7 +34,7 @@
             <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
           </li>
           <li class="{{ Request::path() === 'reports' ? 'nav-item active' : '' }} ">
-            <a class="nav-link js-scroll-trigger" href="/reports">Reports</a>
+            <a class="nav-link js-scroll-trigger" href="/reports/index">Reports</a>
           </li>
         </ul>
       </div>

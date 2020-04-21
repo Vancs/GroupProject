@@ -4,8 +4,8 @@
     ID: {{$Schedules->id}}
     <br />  Semester and year: {{$Schedules->semester_and_year}}
     <br />  Course ID: {{$Schedules->CRSRID}}
-    <br />  Code: {{$Schedules->Code}}
-    <br />  Title: {{$Schedules->Title}}
+    <br />  Code: {{$Schedules->code}}
+    <br />  Title: {{$Schedules->title}}
     <br />  Credit: {{$Schedules->credit}}
     <br />  Start Date: {{$Schedules->start_date}}
     <br />  End Date: {{$Schedules->end_date}}
@@ -16,7 +16,7 @@
     <br />  Enrollment: {{$Schedules->enrollment}}
     <br />  Instructor ID: {{$Schedules->instructor_id}}
     <br />  Location ID: {{$Schedules->location_id}}
-    <br />  Comments: {{$Schedules->Comments}}
+    <br />  Comments: {{$Schedules->comments}}
     <br />  Created At: {{$Schedules->created_at}}
     <br />  Updated On: {{$Schedules->updated_at}}
 
