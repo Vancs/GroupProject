@@ -6,9 +6,8 @@
             <h2>Course<b>Schedules</b></h2>
         </div>
         <div class="col-sm-6">
-          <a href="{{ route('schedules.create', $Schedules->first())}}" class="btn btn-primary">Create</a>
-            <!--<a href="{{ route('schedules.create', $Schedules->first())}}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A New Course</span></a>
-        --></div>
+          <a href="{{ route('schedules.create', $Schedules->first())}}" class="btn btn-success">Create</a>
+          </div>
    </div>
 </div>
     @foreach($Schedules as $b)
@@ -19,26 +18,35 @@
             <td>{{$b->credit}}</td>
             <td>{{$b->class_days}}</td>
             <td>{{$b->class_time}}</td>
-            <td>{{$b->instructor_id}}</td>
-            <td>{{$b->location_id}}</td>
+            @foreach($instructors as $instructor)
+            @if($b->instructor_id == $instructor['id'])
+            <td>{{$instructor['name']}}</td>
+            @endif
+            @endforeach
+
+            @foreach($locations as $location)
+            @if($b->location_id == $location['id'])
+            <td>{{$location['building']}}</td>
+            @endif
+            @endforeach
             <td>{{$b->comments}}</td>
             <td>
                 <form method="post" action="/schedule/{{$b->id}}">
                     @csrf
                     {{method_field('DELETE')}}
-                    <input type="submit" value="Delete {{$b->id}}">
+                    <button class="btn btn-danger" type="submit" value="Delete {{$b->id}}"> Delete </button>
                 </form>
             </td>
             <td>
                 <form method="get" action="/schedule/{{$b->id}}/edit">
                     @csrf
-                    <input type="submit" value="Update {{$b->id}}">
+                    <button class="btn btn-warning" type="submit" value="Update {{$b->id}}"> Update </button>
                 </form>
             </td>
             <td>
                 <form method="get" action="/schedule/{{$b->id}}/show">
                     @csrf
-                    <input type="submit" value="Show:  {{$b->id}}">
+                    <button class="btn btn-primary" type="submit" value="Show:  {{$b->id}}"> Show </button>
                 </form>
             </td>
         </tr>
