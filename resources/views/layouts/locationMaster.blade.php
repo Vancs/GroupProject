@@ -16,7 +16,17 @@
 <div class="col-sm-6">
     <a href="../instructors/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Instructors Screen</span></a>
     <a href="../locations/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Locations Screen</span></a>
-    <a href="../home/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Home Screen</span></a>
+    <a href="../home/" class="btn btn-success" data-toggle="modal" style="margin-right: 30px"> <span>Go to the Home Screen</span></a>  
 </div>
 </body>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; AU-Schedule Tracker 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+
 </html>

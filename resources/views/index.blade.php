@@ -1,4 +1,5 @@
 @extends('layouts.MasterLayout.NavLayout')
+@extends('layouts.MasterLayout.NavLayout')
 @section('title','Welcome!')
 @section('content')
 
