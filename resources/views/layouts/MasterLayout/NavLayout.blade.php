@@ -56,4 +56,5 @@
   <!-- Plugin JavaScript -->
   <script src="/js/jquery.easing.min.js"></script>
 </body>
+@extends('layouts.footer')
 </html>
