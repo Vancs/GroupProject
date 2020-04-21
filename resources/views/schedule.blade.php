@@ -1,4 +1,5 @@
 @extends('layouts.scheduleMaster')
+@section('title','Schedule')
 @section('content')
 <div class="table-title">
     <div class="row">
@@ -31,7 +32,7 @@
             @endforeach
             <td>{{$b->comments}}</td>
             <td><a href="{{route('schedules.destroy',['id'=>$b->id])}}" class = "btn btn-danger">Delete</a></td>
-            <td><a href="{{route('schedules.edit',['id'=>$b->id])}}" class = "btn btn-warning">Edit</a></td>
+            <td><a href="{{route('schedules.edit', $b->id) }}" class = "btn btn-warning">Edit</a></td>
             <td>
                 <form method="get" action="/schedule/{{$b->id}}/show">
                     @csrf

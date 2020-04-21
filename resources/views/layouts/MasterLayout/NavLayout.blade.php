@@ -34,8 +34,7 @@
             body {
                 color: #566787;
                 background: #f5f5f5;
-                font-family: 'Varela Round', sans-serif;
-                font-size: 13px;
+
             }
             .table-wrapper {
                 background: #fff;
@@ -54,25 +53,25 @@
             }
             .table-title h2 {
                 margin: 5px 0 0;
-                font-size: 24px;
+
             }
             .table-title .btn-group {
                 float: right;
             }
             .table-title .btn {
-                color: #fff;
+
                 float: right;
-                font-size: 13px;
+
                 border: none;
                 min-width: 50px;
                 border-radius: 2px;
                 border: none;
-                outline: none !important;
+
                 margin-left: 10px;
             }
             .table-title .btn i {
                 float: left;
-                font-size: 21px;
+
                 margin-right: 5px;
             }
             .table-title .btn span {
@@ -97,17 +96,16 @@
                 background: #f5f5f5;
             }
             table.table th i {
-                font-size: 13px;
+
                 margin: 0 5px;
                 cursor: pointer;
             }
             table.table td:last-child i {
                 opacity: 0.9;
-                font-size: 22px;
+
                 margin: 0 5px;
             }
             table.table td a {
-                
                 display: inline-block;
                 text-decoration: none;
                 outline: none !important;
@@ -122,7 +120,7 @@
                 color: #F44336;
             }
             table.table td i {
-                font-size: 19px;
+
             }
             table.table .avatar {
                 border-radius: 50%;
@@ -135,7 +133,7 @@
             }
             .pagination li a {
                 border: none;
-                font-size: 13px;
+
                 min-width: 30px;
                 min-height: 30px;
                 color: #999;
@@ -158,13 +156,13 @@
                 color: #ccc;
             }
             .pagination li i {
-                font-size: 16px;
+
                 padding-top: 6px
             }
             .hint-text {
                 float: left;
                 margin-top: 10px;
-                font-size: 13px;
+
             }
             /* Custom checkbox */
             .custom-checkbox {
@@ -247,7 +245,7 @@
                 min-width: 100px;
             }
             .modal form label {
-                font-weight: normal;
+
             }
         </style>
         <script type="text/javascript">
@@ -297,7 +295,7 @@
             <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
           </li>
           <li class="{{ Request::path() === 'reports' ? 'nav-item active' : '' }} ">
-            <a class="nav-link js-scroll-trigger" href="/reports/index">Reports</a>
+            <a class="nav-link js-scroll-trigger" href="/reports">Reports</a>
           </li>
         </ul>
       </div>

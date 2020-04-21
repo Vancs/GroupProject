@@ -1,7 +1,9 @@
 @extends('layouts/scheduleMaster2')
+@section('title','Edit Schedule')
 @section('content')
     <form action="{{route('schedules.update')}}" method="post">
         @csrf
+        {{ method_field('POST') }}
         ID: {{$schedules->id}}
 
         <br />Semester and year: <input class="form-control" type="text" name="semester_and_year" value="{{$schedules -> semester_and_year}}">
@@ -27,6 +29,7 @@
           @endforeach
         </select>
         <br /> Comments: <textarea class="form-control" type="text" name="Comments" value="{{$schedules -> comments }}">{{$schedules -> comments }}</textarea>
+        <input type="hidden" name="id" value = "{{$schedules->id}}">
         <br /> <button class="btn btn-success" type="submit"> Update This Course </button>
       </form>
         <br />    <a href="/schedule" > Go Back to the Main Page </a>

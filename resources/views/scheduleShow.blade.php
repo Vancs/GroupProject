@@ -1,4 +1,5 @@
 @extends('layouts/scheduleMaster2')
+@section('title','Show Schedule')
 
 @section('content')
     ID: {{$Schedules->id}}
@@ -14,8 +15,16 @@
     <br />  Final Day: {{$Schedules->final_day}}
     <br />  Final Time: {{$Schedules->final_time}}
     <br />  Enrollment: {{$Schedules->enrollment}}
-    <br />  Instructor ID: {{$Schedules->instructor_id}}
-    <br />  Location ID: {{$Schedules->location_id}}
+    @foreach($instructors as $instructor)
+    @if($Schedules->instructor_id == $instructor['id'])
+    <br />  Instructor:{{$instructor['name']}}</td>
+    @endif
+    @endforeach
+    @foreach($locations as $location)
+    @if($Schedules->location_id == $location['id'])
+    <br /> Building:{{$location['building']}}</td>
+    @endif
+    @endforeach
     <br />  Comments: {{$Schedules->comments}}
     <br />  Created At: {{$Schedules->created_at}}
     <br />  Updated On: {{$Schedules->updated_at}}

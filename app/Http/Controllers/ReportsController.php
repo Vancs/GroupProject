@@ -11,7 +11,7 @@ class ReportsController extends Controller
     //
     public function create()
     {
-        return view('reports');
+        return view('reports.create');
     }
 
     public function store(Request $request)
@@ -29,6 +29,6 @@ class ReportsController extends Controller
     public function displayStock()
     {
         $reports = Courses::sortable()->paginate(20);
-        return view('reports.reports_index',compact('reports'),['reports' => $reports]);
+        return view('reports.index',compact('reports'),['reports' => $reports]);
     }
 }

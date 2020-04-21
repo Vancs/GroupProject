@@ -267,31 +267,31 @@
 </head>
 <br />
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/home">AU Schedule Tracker</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/locations">Locations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/instructors">Instructors</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/reports/index">Reports</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand js-scroll-trigger" href="/home">AU Schedule Tracker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="{{ Request::path() === 'locations' ? 'nav-item active' : '' }} ">
+            <a class="nav-link js-scroll-trigger" href="/locations">Locations</a>
+          </li>
+          <li class="{{ Request::path() === 'instructors' ? 'nav-item active' : '' }} ">
+            <a class="nav-link js-scroll-trigger" href="/instructors">Instructors</a>
+          </li>
+          <li class="{{ Request::path() === 'schedule' ? 'nav-item active' : '' }} ">
+            <a class="nav-link js-scroll-trigger" href="/schedule">Schedule</a>
+          </li>
+          <li class="{{ Request::path() === 'reports' ? 'nav-item active' : '' }} ">
+            <a class="nav-link js-scroll-trigger" href="/reports">Reports</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js" rel="stylesheet"></script>
 <!-- Custom JavaScript for this theme -->

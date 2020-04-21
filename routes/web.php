@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/schedule','courseController@index');
 Route::get('/schedule/create','courseController@create')->name('schedules.create');
-Route::get('/schedule/{id}/edit','courseController@edit')->name('schedules.edit');
+Route::get('/schedule/edit/{post}','courseController@edit')->name('schedules.edit');
 Route::get('/schedule/{id}/delete','courseController@destroy')->name('schedules.destroy');
 Route::post('/schedule/store','courseController@store')->name('schedules.store');
 Route::post('/schedule/update','courseController@update')->name('schedules.update');
@@ -43,12 +43,8 @@ Route::get('/home', function(){
   return view('index');
 });
 
-Route::get('/reports', function(){
-  return view('reports');
-});
-
-Route::get('/reports','ReportsController@create');
+Route::get('/reports/create','ReportsController@create')->name('reports.create');
 Route::post('/reports/store','ReportsController@store');
-Route::get('/reports/index','ReportsController@displayStock');
+Route::get('/reports','ReportsController@displayStock');
 
 Auth::routes();

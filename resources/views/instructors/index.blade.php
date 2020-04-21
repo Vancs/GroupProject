@@ -8,8 +8,8 @@
                 	<div class="col-lg-6">
                     	<h2>Instructors</b></h2>
                 	</div>
-                	<div class="col-sm-6">
-                    	<a href="schedule/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A New Instructor</span></a>
+									<div class="col-sm-6">
+											<a href="{{ route('instructors.create', $instructors->first())}}" class="btn btn-success"><i class="material-icons">&#xE147;</i>Create</a>
                 	</div>
            		</div>
 			</div>
@@ -32,7 +32,6 @@
 					</tr>
 				@endforeach
 			</table>
-			<a href="{{route('instructors.create',['id'=>$instructor->id])}}" class = "btn btn-success">Add a New Instructor</a>
 		</div>
 	</div>
 	<br/>

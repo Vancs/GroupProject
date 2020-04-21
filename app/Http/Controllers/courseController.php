@@ -74,7 +74,11 @@ class courseController extends Controller
     public function show($id)
     {
         $schedules = Courses::find($id);
-        return view('scheduleShow', ['Schedules' => $schedules]);    }
+        $instructors['instructors'] = Instructor::all()->toArray();
+        $locations= Location::all();
+        return view('scheduleShow', ['Schedules' => $schedules,
+                                  'locations' => $locations  ], $instructors);
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -1,15 +1,20 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Reports Index')
 @section('content')
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Reports</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-   </head>
-  <body>
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Reports</b></h2>
+                </div>
+                <div class="col-sm-6">
+                  <a href="{{ route('reports.create', $reports->first())}}" class="btn btn-success"><i class="material-icons">&#xE147;</i>Create</a>
+                </div>
+            </div>
+    </div>
+  </div>
+</div>
     <div class="container">
 <div class="container">
     <br />
@@ -41,8 +46,9 @@
       </tr>
       @endforeach
     </tbody>
+
   </table>
-  
+
   </div>
   <br/>
   @endsection
