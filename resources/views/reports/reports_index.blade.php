@@ -1,6 +1,6 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Reports Index')
-@section('content'
+@section('content')
 <!DOCTYPE html>
 <html>
   <head>
