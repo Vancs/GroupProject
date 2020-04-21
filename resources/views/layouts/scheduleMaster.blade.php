@@ -314,8 +314,8 @@
                 <th>Credit</th>
                 <th>Class Days</th>
                 <th>Class time</th>
-                <th>Instructor ID</th>
-                <th>Location ID</th>
+                <th>Instructor Name</th>
+                <th>Building</th>
                 <th>Comments</th>
             </tr>
             </thead>

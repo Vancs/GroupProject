@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Courses;
 use Illuminate\Http\Request;
+use App\Instructor;
+use App\Location;
 
 class courseController extends Controller
 {
@@ -14,8 +16,11 @@ class courseController extends Controller
      */
     public function index()
     {
+        $instructors['instructors'] = Instructor::all()->toArray();
+        $locations= Location::all();
         $Schedules = Courses::all();
-        return view('schedule', ['Schedules' => $Schedules]);
+        return view('schedule', ['Schedules' => $Schedules,
+                                  'locations' => $locations  ], $instructors);
     }
 
     /**
@@ -76,7 +81,10 @@ class courseController extends Controller
     public function edit($id)
     {
         $schedules = Courses::find($id);
-        return \View::make('scheduleUpdate')->with('schedules',$schedules);
+        $instructors['instructors'] = Instructor::all()->toArray();
+        $locations= Location::all();
+        return view('scheduleUpdate',['schedules' => $schedules,
+                                  'locations' => $locations  ], $instructors);
     }
 
     /**
