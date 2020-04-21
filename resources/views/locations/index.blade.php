@@ -24,4 +24,5 @@
       <a href="{{ route('locations.create', $locations->first())}}" class="btn btn-primary">Create</a>
     </div>
   </div>
+  <br/>
 @endsection

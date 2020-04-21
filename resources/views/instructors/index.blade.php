@@ -1,6 +1,21 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Instructors Index')
 @section('content')
+	<div class="container">
+    	<div class="table-wrapper">
+        	<div class="table-title">
+            	<div class="row">
+                	<div class="col-lg-6">
+                    	<h2>Instructors</b></h2>
+                	</div>
+                	<div class="col-sm-6">
+                    	<a href="schedule/create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A New Instructor</span></a>
+                	</div>
+           		</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="col-sm-12">
 			<table class="table">
@@ -20,4 +35,5 @@
 			<a href="{{route('instructors.create',['id'=>$instructor->id])}}" class = "btn btn-success">Add a New Instructor</a>
 		</div>
 	</div>
+	<br/>
 @endsection

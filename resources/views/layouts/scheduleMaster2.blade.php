@@ -270,9 +270,9 @@
         </div>
         <table class="table table-striped table-hover">
             <tbody>
-            @yield('content')
+                @yield('content')
             </tbody>
-        </div>
+        </table>
     </div>
 </div>
 <!-- Edit Modal HTML -->
