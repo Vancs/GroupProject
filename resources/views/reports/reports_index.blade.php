@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index Page</title>
+    <title>Reports</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
    </head>
@@ -22,22 +22,20 @@
     <table class="table table-bordered">
     <thead>
       <tr>
-        <th>@sortablelink('id')</th>
-        <th>@sortablelink('CRSRID')</th>
         <th>@sortablelink('semester_and_year')</th>
-        <th>@sortablelink('created_at')</th>
-        <th>@sortablelink('updated_at')</th>
+        <th>@sortablelink('code')</th>
+        <th>@sortablelink('title')</th>
+        <th>@sortablelink('enrollment')</th>
       </tr>
     </thead>
     <tbody>
 
       @foreach($reports as $report)
       <tr>
-        <td>{{$report->id}}</td>
-        <td>{{$report->CRSRID}}</td>
         <td>{{$report->semester_and_year}}</td>
-        <td>{{$report->created_at}}</td>
-        <td>{{$report->updated_at}}</td>
+        <td>{{$report->code}}</td>
+        <td>{{$report->title}}</td>
+        <td>{{$report->enrollment}}</td>
           </form>
         </td>
       </tr>
@@ -46,4 +44,5 @@
   </table>
   
   </div>
+  <br/>
   @endsection
