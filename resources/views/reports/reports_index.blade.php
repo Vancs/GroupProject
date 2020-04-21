@@ -1,16 +1,7 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Reports Index')
-@section('content'
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Index Page</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-   </head>
-  <body>
-    <div class="container">
+@section('content')
+<div class="container">
     <br />
       @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -29,21 +20,20 @@
       </tr>
     </thead>
     <tbody>
-      
-      @foreach($courses as $course)
+
+      @foreach($reports as $report)
       <tr>
-        <td>{{$course->id}}</td>
-        <td>{{$course->CRSRID}}</td>
-        <td>{{$course->semester_and_year}}</td>
-        <td>{{$course->created_at}}</td>
-        <td>{{$course->updated_at}}</td>
+        <td>{{$report->id}}</td>
+        <td>{{$report->CRSRID}}</td>
+        <td>{{$report->semester_and_year}}</td>
+        <td>{{$report->created_at}}</td>
+        <td>{{$report->updated_at}}</td>
           </form>
         </td>
       </tr>
       @endforeach
     </tbody>
   </table>
-  {!! $courses->appends(\Request::except('page'))->render() !!}
+  
   </div>
-  </body>
-</html>
+  @endsection
