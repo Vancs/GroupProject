@@ -10,20 +10,20 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" src="/img/AU1.jpg">
+                <div class="carousel-item active" style="background-image: url('/img/AU1.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Welcome to AU!</h3>
                         <p>A big open campus and friendly environment! </p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" src="/img/AU.jpg">
+                <div class="carousel-item active" style="background-image: url('/img/AU.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Go Spartans</h3>
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" src="/img/AU2.jpg">
+                <div class="carousel-item active" style="background-image: url('/img/AU2.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Join The Computer Science Club!</h3>
                     </div>
