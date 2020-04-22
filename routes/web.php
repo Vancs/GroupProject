@@ -44,6 +44,7 @@ Route::get('/home', function(){
 });
 
 Route::get('/reports/create','ReportsController@create')->name('reports.create');
+Route::get('/reports/show','ReportsController@show')->name('reports.show');
 Route::post('/reports/store','ReportsController@store');
 Route::get('/reports','ReportsController@displayStock');
 

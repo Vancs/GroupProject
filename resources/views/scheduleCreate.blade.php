@@ -28,11 +28,13 @@
         Enrollment: <input class="form-control" type="text" name="enrollment" value="{{old('enrollment')}}">
         <p style="color: red">{{$errors->first('enrollment')}}</p>
          Instructor: <select class="form-control" name="instructor_id">
+           <option selected="true" disabled="disabled">Choose an instructor</option>
         @foreach ($instructors as $instructor)
         <option class="form-control" name="instructor_id" value="{{$instructor['id'] }}"> {{$instructor['name']}}</option>
         @endforeach
         </select>
       <br />  Building: <select class="form-control" name="location_id">
+        <option selected="true" disabled="disabled">Choose a building</option>
         @foreach ($locations as $location)
       <option class="form-control" name="location_id" value="{{ $location['id'] }}"> {{$location['building']}}</option>
         @endforeach

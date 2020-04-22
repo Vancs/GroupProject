@@ -316,6 +316,7 @@
                 <th>Class time</th>
                 <th>Instructor Name</th>
                 <th>Building</th>
+                <th>Room</th>
                 <th>Comments</th>
             </tr>
             </thead>

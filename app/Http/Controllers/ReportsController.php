@@ -11,7 +11,16 @@ class ReportsController extends Controller
     //
     public function create()
     {
-        return view('reports.create');
+        $Schedules = Courses::all()->unique('title');
+        $year = Courses::all()->unique('semester_and_year');
+        return view('reports.create', ['Schedules' => $Schedules, 'year' => $year ]);
+    }
+
+    public function show(Request $request)
+    {
+        $value = $request->input('title');
+        $courses = Courses::all()->where('title', '=', $value);
+        return view('reports.show', ['courses' => $courses]);
     }
 
     public function store(Request $request)

@@ -28,6 +28,7 @@
             @foreach($locations as $location)
             @if($b->location_id == $location['id'])
             <td>{{$location['building']}}</td>
+            <td>{{$location['room']}}</td>
             @endif
             @endforeach
             <td>{{$b->comments}}</td>
