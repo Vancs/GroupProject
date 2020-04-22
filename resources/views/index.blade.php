@@ -19,7 +19,7 @@
             <li>Create, Read, Update, and Delete functionality.</li>
             <li>Track and view enrollment change between semesters for a selected course.</li>
             <li>If you would like to visit the AU web site, click <a href="https://www.aurora.edu">Here!</a> </li>
-            <li>If you would like to visit the AU Web Advisor page, click <a href="">Here!</a> </li>
+            <li>If you would like to visit the AU Web Advisor page, click <a href="https://wa3.aurora.edu/WebAdvisor/WebAdvisor?TYPE=M&PID=CORE-WBMAIN&TOKENIDX=697327226">Here!</a> </li>
           </ul>
         </div>
       </div>
