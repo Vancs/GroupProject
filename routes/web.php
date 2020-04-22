@@ -39,7 +39,7 @@ Route::get('/locations/create','LocationController@create')->name('locations.cre
 Route::post('/locations/create','LocationController@store')->name('locations.store');
 Route::post('/locations/update','LocationController@update')->name('locations.update');
 
-Route::get('/home', function(){
+Route::get('/', function(){
   return view('index');
 });
 

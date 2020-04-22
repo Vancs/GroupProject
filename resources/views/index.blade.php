@@ -1,49 +1,48 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Welcome!')
 @section('content')
+
     <header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('/img/AU1.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Welcome to AU!</h3>
-                        <p>A big open campus and friendly environment! </p>
-                    </div>
-                </div>
-                <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('/img/AU.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Go Spartans</h3>
-                    </div>
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('/img/AU2.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Join The Computer Science Club!</h3>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+      <h1 class="my-4">Welcome to the AU Schedule Tracker</h1>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img class="d-block w-100" src="/img/AU1.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Welcome to AU!</h3>
+            <p>A big open campus and friendly environment! </p>
+          </div>
+      </div>
+      <div class="carousel-item">
+          <img class="d-block w-100" src="/img/AU.jpg" alt="Second slide">
+          <h3>Go Spartans</h3>
+      </div>
+      <div class="carousel-item">
+          <img class="d-block w-100" src="/img/AU2.png" alt="Third slide">
+          <h3>Join The Computer Science Club!</h3>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
+</div>
     </header>
+
+    <br><br><br>
 
     <!-- Page Content -->
     <div class="container">
-
-        <h1 class="my-4">Welcome to the AU Schedule Tracker</h1>
 
         <!-- Marketing Icons Section -->
         <div class="row">
@@ -97,6 +96,6 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 @endsection
