@@ -1,8 +1,6 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Reports Index')
 @section('content')
-<div class="container">
-    <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
                 <div class="col-lg-6">
@@ -49,7 +47,5 @@
 
             </div>
             <br/>
-  </div>
-</div>
 
   @endsection

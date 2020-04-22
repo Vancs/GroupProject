@@ -287,6 +287,14 @@
           <li class="{{ Request::path() === 'reports' ? 'nav-item active' : '' }} ">
             <a class="nav-link js-scroll-trigger" href="/reports">Reports</a>
           </li>
+          <li class="dropdown">
+          <a class="nav-link js-scroll-trigger"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ Auth::user()->name }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="main-nav">
+            <a href="{{ url('/logout') }}" class="dropdown-item" role="button" >Logout</a>
+          </div>
+        </li>
         </ul>
       </div>
     </div>
