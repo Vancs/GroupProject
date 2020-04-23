@@ -1,6 +1,7 @@
-@extends('layouts.MasterLayout.NavLayout')
+@extends('layouts.MasterLayout.NavLayout2')
 @section('title','Create Instructor')
 @section('content')
+    <br />
 	<div class="row mt-5">
 		<div class="col-sm-8 offset-sm-2">
 			<form action="{{route('instructors.store')}}" method = "post">

@@ -1,6 +1,10 @@
 @extends('layouts.MasterLayout.NavLayout')
 @section('title','Show Report')
 @section('content')
+
+    <br />
+    <br />
+    <br />
 <h2>
   <br/>
   <table class="table">
@@ -35,5 +39,7 @@
 </h2>
 <br />
 
+    <br />
+    <br />
 
 @endsection

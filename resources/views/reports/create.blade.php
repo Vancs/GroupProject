@@ -1,6 +1,9 @@
-@extends('layouts.MasterLayout.NavLayout')
+@extends('layouts.MasterLayout.NavLayout2')
 @section('title','Create Report')
 @section('content')
+    <br />
+    <br />
+    <br />
 <form method="get" action="/reports/show ">
   @csrf
   {{ method_field('POST') }}
